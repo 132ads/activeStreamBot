@@ -17,7 +17,6 @@ bot.on("presenceUpdate", (oldMember, newMember) => {
               if (oldMember.presence.game.url != null) {
                 if (oldMember.presence.game.url.slice(0,21) == "https://www.twitch.tv") {
                   newMember.removeRole(streamer);
-                  //console.log(newMember)
                   console.log("Removed streamer role from", newMember.user.username)
                 }
               }
@@ -26,7 +25,6 @@ bot.on("presenceUpdate", (oldMember, newMember) => {
               if (newMember.presence.game.url != null) {
                 if (newMember.presence.game.url.slice(0,21) == "https://www.twitch.tv") {
                   newMember.addRole(streamer);
-                  console.log(newMember)
                   console.log("Added role from", newMember.user.username)
                 }
               }
