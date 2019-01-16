@@ -12,7 +12,7 @@ bot.on("ready", () => {
 });
 // On presence update, will check for streaming and add role when detects change in presence that is a twitch stream.
 bot.on("presenceUpdate", (oldMember, newMember) => {
-            let streamer = newMember.guild.roles.find(role => role.name === "Streamer");
+            let streamer = newMember.guild.roles.find(role => role.name === "streamer");
             if (oldMember.presence.game != null) {
               if (oldMember.presence.game.url != null) {
                 if (oldMember.presence.game.url.slice(0,21) == "https://www.twitch.tv") {
